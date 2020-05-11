@@ -22,5 +22,11 @@ object RestAPICall {
     val result = scala.io.Source.fromURL(url).mkString.trim.stripLeading().stripTrailing().replaceAll("\n","")
     return result
   }
+  def covid19apiIndiaTravelHistory (): String = {
+    val url= "https://api.covid19india.org/raw_data.json"
+    val result = scala.io.Source.fromURL(url).mkString.trim.stripLeading().stripTrailing().replaceAll("\n","")
+    return result
+  }
+
 
 }
